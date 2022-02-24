@@ -1,10 +1,10 @@
-#Moodle presentation extract
+# Moodle presentation extract
 
 ----------------------------
 
 This repository can help you to turn presentation from Moodle into pdf and download it
 
-##How to use 
+## How to use 
 
 1. Open the page with presentation
 2. Wait until the loading of page is finished
