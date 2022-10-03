@@ -28,9 +28,9 @@
                 const {w, h} = imageSizes[i];
                 doc.addPage([w, h], "l")
                 doc.addImage(base64img, null, 0, 0, w, h);
-                return doc;
             }, doc);
-        doc.save();
+        const filename = document.querySelector("h2").innerText.replace(/Лекция[.]?/g, "").trim();
+        doc.output('save', filename + '.pdf');
     });
 
     function getImageDimensions(base64) {
