@@ -54,7 +54,6 @@
             <progress id="indicator" style="width: 50%;"></progress>
             <h1>Скачиваем ${filename}</h1>
             <div id="progress">Скачано: 0 Bytes</div>
-            <a href="https://agile-garden-12289.herokuapp.com/">Тут можно наложить текст на pdf</a>
             `;
             const $progress = document.querySelector("#progress");
             const $indicator = document.querySelector("#indicator");
