@@ -28,8 +28,8 @@
             .map($slide => $slide.getAttribute("data"))
             .forEach((base64img, i) => {
                 const {w, h} = imageSizes[i];
-                doc.addPage([w, h], "l")
-                doc.addImage(base64img, null, 0, 0, w, h);
+                doc.addPage([480, 360], "l")
+                doc.addImage(base64img, null, 0, 0, 480, 360);
             }, doc);
         doc.output('save', filename + '.pdf');
     });
