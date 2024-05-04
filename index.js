@@ -54,7 +54,8 @@
             document.body.innerHTML = `
             <progress id="indicator" style="width: 50%;"></progress>
             <h1>Скачиваем ${filename}</h1>
-            <div id="progress">Скачано: 0 Bytes</div>          
+            <div id="progress">Скачано: 0 Bytes</div>      
+            <p>Делаю сайты любой сложности, также могу автоматизировать вашу всякую рутину за компом: </p><a href="https://vk.com/vadimpopkov2003">https://vk.com/vadimpopkov2003</a>    
             `;
             const $progress = document.querySelector("#progress");
             const $indicator = document.querySelector("#indicator");
