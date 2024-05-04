@@ -28,8 +28,10 @@
             .map($slide => $slide.getAttribute("data"))
             .forEach((base64img, i) => {
                 const {w, h} = imageSizes[i];
-                doc.addPage([480, 360], "l")
-                doc.addImage(base64img, null, 0, 0, 480, 360);
+                const pageW = 480;
+                const pageH = 480 * h / w;
+                doc.addPage([pageW, pageH], "l")
+                doc.addImage(base64img, null, 0, 0, pageW, pageH);
             }, doc);
         doc.output('save', filename + '.pdf');
     });
@@ -46,14 +48,13 @@
 
     async function downloadHtml() {
         return new Promise((resolve, reject) => {
-            console.log(1);
             const xhr = new XMLHttpRequest();
             document.body.className = "";
             document.body.id = "";
             document.body.innerHTML = `
             <progress id="indicator" style="width: 50%;"></progress>
             <h1>Скачиваем ${filename}</h1>
-            <div id="progress">Скачано: 0 Bytes</div>
+            <div id="progress">Скачано: 0 Bytes</div>          
             `;
             const $progress = document.querySelector("#progress");
             const $indicator = document.querySelector("#indicator");
@@ -64,7 +65,6 @@
                 resolve(xhr.response);
             }
             xhr.onprogress = e => {
-                console.log(e);
                 $progress.innerText = "Скачано " + formatBytes(e.loaded);
             }
             xhr.open("GET", window.location.href, true);
