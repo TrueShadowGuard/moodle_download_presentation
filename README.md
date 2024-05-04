@@ -7,7 +7,7 @@
 1. Открыть страницу с презентацией
 3. Скопировать строку ниже
 ~~~~
-avascript:(()=>{let e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/trueshadowguard/moodle_download_presentation@main/index.js",document.head.append(e)})();
+avascript:(()=>{let e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/trueshadowguard/moodle_download_presentation/index.js",document.head.append(e)})();
 ~~~~
 4. Вставить ее в адресную строку на странице с презентацией
 5. Ввести j в начало строки чтобы получилось как на картинке
